@@ -18,7 +18,6 @@ const createStyle = (theme: any) => {
       backgroundColor: theme.background,
       paddingHorizontal: 4,
       paddingVertical: 5,
-      borderWidth:1,borderColor:'red'
     },
   });
 };
