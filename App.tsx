@@ -1,22 +1,20 @@
 import React from 'react';
-import {SafeAreaView, } from 'react-native';
-import Toast from 'react-native-toast-message';
-import {toastConfig} from './src/helper/toast';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RootStack from './src/stacks/stackNavigation';
 
 function App() {
   return (
-    <>
-      <NavigationContainer>
-        <SafeAreaView style={{flex: 1}}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <NavigationContainer>
           <RootStack />
-          <Toast config={toastConfig} />
-        </SafeAreaView>
-      </NavigationContainer>
-    </>
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
 
-
 export default App;
+

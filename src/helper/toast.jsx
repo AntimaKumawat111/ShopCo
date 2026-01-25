@@ -1,83 +1,41 @@
-import Toast, {
-  BaseToast,
-  ErrorToast,
-  SuccessToast,
-  InfoToast,
-} from 'react-native-toast-message';
-import UseTheme from './color';
-import {Font_Size_10} from './font';
+// src/helper/ThemedToast.js
+import React from 'react';
+import Toast, { SuccessToast, ErrorToast, InfoToast } from 'react-native-toast-message';
+import { Font_Size_10 } from './font';
+import { useTheme } from './color';
 
-export const toastConfig = {
-  success: props => {
-    const theme = UseTheme();
-    return (
+export default function ThemedToast() {
+  const theme = useTheme();
+
+  const toastConfig = {
+    success: props => (
       <SuccessToast
         {...props}
-        style={{borderLeftColor: theme.successGreen}}
-        contentContainerStyle={{
-          paddingHorizontal: 15,
-          backgroundColor: theme.successGreen,
-        }}
-        text1Style={{
-          fontSize: Font_Size_10,
-          fontWeight: '400',
-          color: theme.white,
-        }}
-        text1NumberOfLines={2}
-        text2Style={{
-          fontSize: Font_Size_10,
-          color: theme.white,
-        }}
-        text2NumberOfLines={2}
+        style={{ borderLeftColor: theme.successGreen }}
+        contentContainerStyle={{ backgroundColor: theme.successGreen }}
+        text1Style={{ fontSize: Font_Size_10, color: theme.white }}
+        text2Style={{ fontSize: Font_Size_10, color: theme.white }}
       />
-    );
-  },
-  error: props => {
-    const theme = UseTheme();
-    return (
+    ),
+    error: props => (
       <ErrorToast
         {...props}
-        style={{borderLeftColor: theme.error}}
-        contentContainerStyle={{
-          paddingHorizontal: 15,
-          backgroundColor: theme.error,
-        }}
-        text1Style={{
-          fontSize: Font_Size_10,
-          fontWeight: '400',
-          color: theme.white,
-        }}
-        text1NumberOfLines={2}
-        text2Style={{
-          fontSize: Font_Size_10,
-          color: theme.white,
-        }}
-        text2NumberOfLines={2}
+        style={{ borderLeftColor: theme.error }}
+        contentContainerStyle={{ backgroundColor: theme.error }}
+        text1Style={{ fontSize: Font_Size_10, color: theme.white }}
+        text2Style={{ fontSize: Font_Size_10, color: theme.white }}
       />
-    );
-  },
-  info: props => {
-    const theme = UseTheme();
-    return (
+    ),
+    info: props => (
       <InfoToast
         {...props}
-        style={{borderLeftColor: theme.infoBlue}}
-        contentContainerStyle={{
-          paddingHorizontal: 15,
-          backgroundColor: theme.infoBlue,
-        }}
-        text1Style={{
-          fontSize: Font_Size_10,
-          fontWeight: '400',
-          color: theme.white,
-        }}
-        text1NumberOfLines={2}
-        text2Style={{
-          fontSize: Font_Size_10,
-          color: theme.white,
-        }}
-        text2NumberOfLines={2}
+        style={{ borderLeftColor: theme.infoBlue }}
+        contentContainerStyle={{ backgroundColor: theme.infoBlue }}
+        text1Style={{ fontSize: Font_Size_10, color: theme.white }}
+        text2Style={{ fontSize: Font_Size_10, color: theme.white }}
       />
-    );
-  },
-};
+    ),
+  };
+
+  return <Toast config={toastConfig} />;
+}

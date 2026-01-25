@@ -1,9 +1,9 @@
 import {useColorScheme} from 'react-native';
 
-export default function UseTheme() {
+export const useTheme = () => {
   const scheme = useColorScheme();
   return scheme === 'dark' ? DarkTheme : LightTheme;
-}
+};
 
 export const DarkTheme = {
   background: '#121212',

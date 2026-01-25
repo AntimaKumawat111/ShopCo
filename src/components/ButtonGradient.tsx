@@ -8,8 +8,8 @@ import {
   ViewStyle,
   DimensionValue
 } from 'react-native';
-import UseTheme from '../helper/color';
 import LinearGradient from 'react-native-linear-gradient';
+import { useTheme } from '../helper/color';
 
 type ButtonGradientProps = {
   title: string;
@@ -39,7 +39,7 @@ export default function ButtonGradient({
   gradientStyle,
   gradientColors,
 }: ButtonGradientProps) {
-  const theme = UseTheme();
+  const theme = useTheme();
   const styles = createStyle(theme, height, borderRadius);
 
   return (

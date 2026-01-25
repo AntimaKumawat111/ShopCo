@@ -1,8 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native';
-import UseTheme from '../helper/color';
+import { useTheme } from '../helper/color';
 
 export default function BaseLayout({children}:any) {
-  const theme = UseTheme();
+  const theme = useTheme();
   const styles = createStyle(theme);
   return (
     <>

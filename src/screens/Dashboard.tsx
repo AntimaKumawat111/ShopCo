@@ -1,9 +1,9 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
-import UseTheme from '../helper/color';
+import { useTheme } from '../helper/color';
 
 export default function Dashboard() {
-  const theme = UseTheme();
+  const theme = useTheme();
   const styles = createStyle(theme);
 
   const hoverShop = () => {};
@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <>
       <View style={styles.container}>
-        <Text>Sign up and get 20% off to your first orpder.</Text>
+        <Text style={{color:theme.text}}>Sign up and get 20% off to your first orpder.</Text>
         <Text>Sign up now</Text>
         <View>
           <Text>Shop.Co</Text>
@@ -45,6 +45,7 @@ const createStyle = (theme: any) => {
     container: {
       borderWidth: 1,
       borderColor: 'red',
+      flex:1,
     },
     btnContainer: {
       flex: 1,
