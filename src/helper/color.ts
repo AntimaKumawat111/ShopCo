@@ -18,6 +18,7 @@ export const DarkTheme = {
   white: '#ffffff',
   buttonGradient: ['#0abab5', '#003153'],
   neutralGray: '#2A2A2A',
+  opositeBackground: '#FFFFFF',
 };
 
 export const LightTheme = {
@@ -33,4 +34,5 @@ export const LightTheme = {
   white: '#ffffff',
   buttonGradient: ['#003153', '#1565C0'],
   neutralGray: '#E6E6E8',
+  opositeBackground: '#121212',
 };

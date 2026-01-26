@@ -1,7 +1,7 @@
 import {PixelRatio} from 'react-native';
 
 export const scaleFont = (size: number) => {
-  size * PixelRatio.getFontScale();
+return size * PixelRatio.getFontScale();
 };
 
 export const Font_Size_9 = scaleFont(9)

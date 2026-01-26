@@ -16,8 +16,8 @@ const createStyle = (theme: any) => {
     container: {
       flex: 1,
       backgroundColor: theme.background,
-      paddingHorizontal: 4,
-      paddingVertical: 5,
+      paddingHorizontal: 15,
+      paddingTop: 35,
     },
   });
 };
