@@ -7,7 +7,7 @@ export const useTheme = () => {
 
 export const DarkTheme = {
   background: '#121212',
-  text: '#EDEDED',
+  text: '#ffffff',
   textLightGrey: '#B0B0B0',
   error: '#EF5350',
   successGreen: '#66BB6A',
@@ -19,6 +19,10 @@ export const DarkTheme = {
   buttonGradient: ['#0abab5', '#003153'],
   neutralGray: '#2A2A2A',
   opositeBackground: '#FFFFFF',
+  black: '#000000',
+  opositeColorText: '#000000',
+  placeholder: '#9E9E9E',
+  overlay: 'rgba(255, 255, 255, 0.20)',
 };
 
 export const LightTheme = {
@@ -35,4 +39,8 @@ export const LightTheme = {
   buttonGradient: ['#003153', '#1565C0'],
   neutralGray: '#E6E6E8',
   opositeBackground: '#121212',
+  black: '#000000',
+  opositeColorText: '#ffffff',
+  placeholder: '#8A8A8A',
+  overlay: 'rgba(0, 0, 0, 0.06)',
 };

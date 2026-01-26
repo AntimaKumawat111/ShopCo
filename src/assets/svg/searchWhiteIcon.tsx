@@ -1,7 +1,7 @@
 import * as React from "react"
 import Svg, { G, Path } from "react-native-svg"
 
-function UserProfileBlackIcon(props:any) {
+function SearchWhiteIcon(props:any) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ function UserProfileBlackIcon(props:any) {
         opacity={1}
       >
         <Path
-          d="M45 0C20.147 0 0 20.147 0 45s20.147 45 45 45 45-20.147 45-45S69.853 0 45 0zm0 22.007c8.899 0 16.14 7.241 16.14 16.14 0 8.9-7.241 16.14-16.14 16.14-8.9 0-16.14-7.24-16.14-16.14 0-8.899 7.24-16.14 16.14-16.14zm0 61.836c-11.135 0-21.123-4.885-27.957-12.623 3.177-5.75 8.144-10.476 14.05-13.341 2.009-.974 4.354-.958 6.435.041a17.113 17.113 0 007.473 1.696c2.615 0 5.13-.571 7.473-1.696 2.083-1 4.428-1.015 6.435-.041 5.906 2.864 10.872 7.591 14.049 13.341C66.123 78.957 56.135 83.843 45 83.843z"
+          d="M89.121 84.879L63.874 59.632c5.55-6.535 8.583-14.734 8.583-23.403 0-9.677-3.769-18.775-10.611-25.617C55.003 3.769 45.905 0 36.229 0S17.454 3.769 10.611 10.611C3.769 17.454 0 26.552 0 36.229s3.769 18.774 10.611 25.617c6.842 6.843 15.94 10.611 25.617 10.611 8.669 0 16.868-3.033 23.403-8.583l25.247 25.247c.587.586 1.354.879 2.122.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242zM14.854 57.604c-11.786-11.786-11.786-30.964 0-42.75 5.893-5.893 13.634-8.839 21.375-8.839s15.481 2.947 21.375 8.839c11.786 11.786 11.786 30.964 0 42.75-11.788 11.785-30.964 11.785-42.75 0z"
           transform="matrix(2.81 0 0 2.81 1.407 1.407)"
           stroke="none"
           strokeWidth={1}
@@ -30,7 +30,7 @@ function UserProfileBlackIcon(props:any) {
           strokeLinecap="butt"
           strokeLinejoin="miter"
           strokeMiterlimit={10}
-          fill="#000"
+          fill="#fff"
           fillRule="nonzero"
           opacity={1}
         />
@@ -39,4 +39,4 @@ function UserProfileBlackIcon(props:any) {
   )
 }
 
-export default UserProfileBlackIcon;
+export default SearchWhiteIcon
