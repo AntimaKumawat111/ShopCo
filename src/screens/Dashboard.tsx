@@ -94,6 +94,7 @@ export default function Dashboard() {
             <TouchableOpacity onPress={() => {}}>
               {isDarkTheme ? (
                 <CartWhiteIcon width={30} height={30} />
+                
               ) : (
                 <CartBlackIcon width={30} height={30} />
               )}
