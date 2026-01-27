@@ -43,10 +43,12 @@ import UserProfileBlackIcon from '../assets/svg/userProfileBlackIcon';
 import UserProfileWhiteIcon from '../assets/svg/userProfileWhiteIcon';
 import SearchWhiteIcon from '../assets/svg/searchWhiteIcon';
 import SearchBlackIcon from '../assets/svg/searchBlackIcon';
+import {useNavigation} from '@react-navigation/native';
 
 export default function Dashboard() {
   const theme = useTheme();
   const isDarkTheme = theme.background === DarkTheme.background;
+  const navigation = useNavigation();
   const styles = createStyle(theme);
   const [activeTab, setActiveTab] = useState('shop');
   const [search, setSearch] = useState('');
@@ -56,6 +58,7 @@ export default function Dashboard() {
   };
   const hoverSale = () => {
     setActiveTab('onSale');
+     navigation.navigate('OnSale' as never);
   };
   const hoverNewArrivals = () => {
     setActiveTab('newArrivals');
@@ -64,7 +67,7 @@ export default function Dashboard() {
     setActiveTab('brands');
   };
   const handleClick = () => {
-    console.log('Button clicked!');
+    console.log('Shop clicked!');
   };
 
   const BTNTABS = [
@@ -78,7 +81,7 @@ export default function Dashboard() {
     {title: 'Brands', onPress: hoverBrands, active: activeTab === 'brands'},
   ];
   return (
-    <>
+    <BaseLayout>
       <View style={styles.container}>
         <View style={styles.headerContainer}>
           <Text style={styles.headerTxt}>
@@ -94,7 +97,6 @@ export default function Dashboard() {
             <TouchableOpacity onPress={() => {}}>
               {isDarkTheme ? (
                 <CartWhiteIcon width={30} height={30} />
-                
               ) : (
                 <CartBlackIcon width={30} height={30} />
               )}
@@ -207,7 +209,7 @@ export default function Dashboard() {
           </View>
         </ImageBackground>
       </View>
-    </>
+    </BaseLayout>
   );
 }
 
@@ -216,7 +218,6 @@ const createStyle = (theme: any) => {
     container: {
       flex: 1,
       backgroundColor: theme.background,
-      paddingTop: 40,
     },
     headerContainer: {
       justifyContent: 'center',
