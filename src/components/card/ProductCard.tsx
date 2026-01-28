@@ -7,6 +7,7 @@ import {
   Font_Size_14,
   Font_Size_16,
 } from '../../helper/font';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 type ProductCardProps = {
   name: string;
@@ -16,6 +17,7 @@ type ProductCardProps = {
   sale?: number;
   id?: number | string;
   totalOrders?: string | number;
+  onPress: () => void;
 };
 function ProductCard({
   name,
@@ -24,6 +26,7 @@ function ProductCard({
   rating,
   sale,
   totalOrders,
+  onPress,
 }: ProductCardProps) {
   const theme = useTheme();
   const styles = createStyles(theme);
@@ -62,7 +65,7 @@ function ProductCard({
   };
 
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={onPress}>
       <Image source={image} style={styles.image} />
       {sale && <Text style={styles.sale}> SALE</Text>}
       <View style={styles.bottomContainer}>
@@ -79,7 +82,7 @@ function ProductCard({
 
         <Text style={styles.name}>{totalOrders} </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -93,7 +96,7 @@ const createStyles = (theme: any) => {
       borderRadius: 8,
       width: 180,
       marginRight: 10,
-      marginBottom:10
+      marginBottom: 10,
     },
     image: {
       width: '100%',
@@ -106,7 +109,7 @@ const createStyles = (theme: any) => {
       gap: 2,
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems:'center'
+      alignItems: 'center',
     },
     sale: {
       backgroundColor: '#fb6f92',

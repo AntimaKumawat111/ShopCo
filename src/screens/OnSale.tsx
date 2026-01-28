@@ -22,14 +22,20 @@ import {
 } from '../helper/font';
 import ProductCard from '../components/card/ProductCard';
 import {DUMMYCARDDATA} from '../helper/dummyData';
+import Header from '../components/header';
+import {useNavigation} from '@react-navigation/native';
 
 function OnSale() {
   const theme = useTheme();
   const styles = createStyles(theme);
   const isDarkMode = theme.background === DarkTheme.background;
+  const navigation = useNavigation();
 
   const handlePressView = () => {
-    console.log('handlePressView');
+    navigation.navigate('AllProducts' as never);
+  };
+  const handlePress = () => {
+    navigation.navigate('ProductDetails' as never);
   };
 
   const renderItem = ({item}: any) => {
@@ -43,6 +49,7 @@ function OnSale() {
         rating={item.rating}
         sale={item.sale}
         totalOrders={item.totalOrders}
+        onPress={handlePress}
       />
     );
   };
@@ -50,15 +57,7 @@ function OnSale() {
   return (
     <>
       <BaseLayout>
-        <View style={{}}>
-          <TouchableOpacity>
-            {isDarkMode ? (
-              <BackWhiteIcon width={20} height={20} />
-            ) : (
-              <BackBlackIcon width={20} height={20} />
-            )}
-          </TouchableOpacity>
-        </View>
+        <Header title="On Sale" />
         <View style={styles.headerSection}>
           <Text style={styles.headerTxt}>Hot Details on Trendy Styles!!!</Text>
           <Text style={styles.headerDesc}>
