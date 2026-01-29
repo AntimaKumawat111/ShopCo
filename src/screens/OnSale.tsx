@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {DarkTheme, useTheme} from '../helper/color';
 import BaseLayout from '../components/BaseLayout';
@@ -34,8 +34,9 @@ function OnSale() {
   const handlePressView = () => {
     navigation.navigate('AllProducts' as never);
   };
-  const handlePress = () => {
-    navigation.navigate('ProductDetails' as never);
+
+  const handlePress = (item: any) => {
+    navigation.navigate('ProductDetails', {item});
   };
 
   const renderItem = ({item}: any) => {
@@ -49,7 +50,7 @@ function OnSale() {
         rating={item.rating}
         sale={item.sale}
         totalOrders={item.totalOrders}
-        onPress={handlePress}
+        onPress={() => handlePress(item)}
       />
     );
   };

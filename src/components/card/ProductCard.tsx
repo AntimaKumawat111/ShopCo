@@ -8,6 +8,7 @@ import {
   Font_Size_16,
 } from '../../helper/font';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import StarRating from 'react-native-star-rating-widget';
 
 type ProductCardProps = {
   name: string;
@@ -27,42 +28,11 @@ function ProductCard({
   sale,
   totalOrders,
   onPress,
+  id,
 }: ProductCardProps) {
   const theme = useTheme();
   const styles = createStyles(theme);
   const isDarkMode = theme.background === DarkTheme.background;
-
-  const renderStars = (rating: any) => {
-    const totalStars = 5;
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 >= 0.5;
-
-    return (
-      <View style={styles.starContainer}>
-        {[...Array(totalStars)].map((_, index) => {
-          if (index < fullStars) {
-            return (
-              <Text key={index} style={styles.star}>
-                ★
-              </Text>
-            );
-          }
-          if (index === fullStars && halfStar) {
-            return (
-              <Text key={index} style={styles.star}>
-                ☆
-              </Text>
-            ); // half-look
-          }
-          return (
-            <Text key={index} style={styles.starInactive}>
-              ★
-            </Text>
-          );
-        })}
-      </View>
-    );
-  };
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
@@ -78,7 +48,12 @@ function ProductCard({
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-        {renderStars(rating)}
+        <StarRating
+          rating={rating}
+          onChange={() => {}}
+          starSize={10}
+          color={theme.warningYellow}
+        />
 
         <Text style={styles.name}>{totalOrders} </Text>
       </View>
