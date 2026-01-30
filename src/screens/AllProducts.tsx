@@ -23,12 +23,17 @@ import {
 import ProductCard from '../components/card/ProductCard';
 import {DUMMYCARDDATA} from '../helper/dummyData';
 import Header from '../components/header';
+import {useNavigation} from '@react-navigation/native';
 
 function AllProducts() {
   const theme = useTheme();
   const styles = createStyles(theme);
   const isDarkMode = theme.background === DarkTheme.background;
+  const navigation = useNavigation();
 
+  const handlePress = (item: any) => {
+    navigation.navigate('ProductDetails', {item} as never);
+  };
   const renderItem = ({item}: any) => {
     return (
       <ProductCard
@@ -38,7 +43,7 @@ function AllProducts() {
         rating={item.rating}
         sale={item.sale}
         totalOrders={item.totalOrders}
-        onPress={() => {}}
+        onPress={() => handlePress(item)}
       />
     );
   };

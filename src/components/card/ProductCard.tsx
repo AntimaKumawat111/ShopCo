@@ -38,10 +38,8 @@ function ProductCard({
     <TouchableOpacity style={styles.card} onPress={onPress}>
       <Image source={image} style={styles.image} />
       {sale && <Text style={styles.sale}> SALE</Text>}
-      <View style={styles.bottomContainer}>
-        <Text style={styles.name}>{name}</Text>
-        <Text style={[styles.name, {fontSize: Font_Size_16}]}>{price}</Text>
-      </View>
+      <Text style={styles.name}>{name}</Text>
+      <Text style={[styles.name, {fontSize: Font_Size_16}]}>${price}</Text>
       <View
         style={{
           flexDirection: 'row',
@@ -82,9 +80,9 @@ const createStyles = (theme: any) => {
     },
     bottomContainer: {
       gap: 2,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
+      // flexDirection: 'row',
+      // justifyContent: 'space-between',
+      // alignItems: 'center',
     },
     sale: {
       backgroundColor: '#fb6f92',
