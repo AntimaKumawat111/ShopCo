@@ -85,7 +85,7 @@ const createStyles = (theme: any) => {
       // alignItems: 'center',
     },
     sale: {
-      backgroundColor: '#fb6f92',
+      backgroundColor: theme.lightPink,
       color: theme.text,
       fontFamily: FONT_FAMILY_REGULAR,
       fontSize: Font_Size_14,

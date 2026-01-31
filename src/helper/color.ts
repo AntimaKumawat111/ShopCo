@@ -23,6 +23,7 @@ export const DarkTheme = {
   opositeColorText: '#000000',
   placeholder: '#9E9E9E',
   overlay: 'rgba(255, 255, 255, 0.20)',
+  lightPink: '#e790a6',
 };
 
 export const LightTheme = {
@@ -43,4 +44,5 @@ export const LightTheme = {
   opositeColorText: '#ffffff',
   placeholder: '#8A8A8A',
   overlay: 'rgba(0, 0, 0, 0.06)',
+  lightPink: '#fb6f92',
 };
