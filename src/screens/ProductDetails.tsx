@@ -23,6 +23,7 @@ import {
   Font_Size_20,
 } from '../helper/font';
 import ButtonGradient from '../components/ButtonGradient';
+import {useNavigation} from '@react-navigation/native';
 
 type ProductDetailsProp = {
   route: {
@@ -36,9 +37,9 @@ function ProductDetails({route}: ProductDetailsProp) {
   const {item} = route.params;
   const theme = useTheme();
   const styles = createStyles(theme);
-  const [newColor, setNewColor] = useState('');
+  const navigation = useNavigation();
 
-  console.log('======>>>', item);
+  console.log('======>>> item from productDetails', item);
   if (!item) {
     return null;
   }
@@ -47,8 +48,8 @@ function ProductDetails({route}: ProductDetailsProp) {
     return (
       <>
         <View style={styles.imageCard}>
-          <Image source={item?.image} style={styles.image} />
-          {item?.sale && <Text style={styles.sale}> SALE</Text>}
+          <Image source={image} style={styles.image} />
+          {sale && <Text style={styles.sale}> SALE</Text>}
         </View>
       </>
     );
@@ -82,6 +83,11 @@ function ProductDetails({route}: ProductDetailsProp) {
       </>
     );
   };
+
+  const handlePressCart = (item: any) => {
+    navigation.navigate('Cart', {item});
+  };
+
   return (
     <>
       <BaseLayout>
@@ -151,10 +157,18 @@ function ProductDetails({route}: ProductDetailsProp) {
               alignItems: 'center',
             }}>
             <InfoRow label={'Colors Available'} value={''} />
-
-            {item?.availableColors?.map((color: any, index: number) => (
-              <ColorBox color={color} index={index} />
-            ))}
+            <View
+              style={{
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                width: '55%',
+              }}>
+              {item?.availableColors?.map((color: any, index: number) => (
+                <View style={{gap: 4,marginVertical:5}}>
+                  <ColorBox color={color} index={index} />
+                </View>
+              ))}
+            </View>
           </View>
 
           <InfoRow label={'Brand'} value={item?.brand} />
@@ -165,7 +179,10 @@ function ProductDetails({route}: ProductDetailsProp) {
           <InfoRow label={'tags'} value={item?.tags} />
           <InfoRow label={'final Price'} value={item?.finalPrice} />
 
-          <ButtonGradient title="Add to cart" onPress={() => {}} />
+          <ButtonGradient
+            title="Add to cart"
+            onPress={() => handlePressCart(item)}
+          />
         </ScrollView>
       </BaseLayout>
     </>
