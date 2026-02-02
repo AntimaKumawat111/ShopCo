@@ -37,17 +37,11 @@ import {
   LINE_HEIGHT_40,
   LINE_HEIGHT_50,
 } from '../helper/font';
-import CartBlackIcon from '../assets/svg/cartBlackIcon';
-import CartWhiteIcon from '../assets/svg/cartWhiteIcon';
-import UserProfileBlackIcon from '../assets/svg/userProfileBlackIcon';
-import UserProfileWhiteIcon from '../assets/svg/userProfileWhiteIcon';
-import SearchWhiteIcon from '../assets/svg/searchWhiteIcon';
-import SearchBlackIcon from '../assets/svg/searchBlackIcon';
 import {useNavigation} from '@react-navigation/native';
+import SvgIcon from '../assets/svg';
 
 export default function Dashboard() {
   const theme = useTheme();
-  const isDarkTheme = theme.background === DarkTheme.background;
   const navigation = useNavigation();
   const styles = createStyle(theme);
   const [activeTab, setActiveTab] = useState('shop');
@@ -58,7 +52,7 @@ export default function Dashboard() {
   };
   const hoverSale = () => {
     setActiveTab('onSale');
-     navigation.navigate('OnSale' as never);
+    navigation.navigate('OnSale' as never);
   };
   const hoverNewArrivals = () => {
     setActiveTab('newArrivals');
@@ -95,19 +89,11 @@ export default function Dashboard() {
           <Text style={styles.shopCoTxt}>Shop.Co</Text>
           <View style={styles.iconContainer}>
             <TouchableOpacity onPress={() => {}}>
-              {isDarkTheme ? (
-                <CartWhiteIcon width={30} height={30} />
-              ) : (
-                <CartBlackIcon width={30} height={30} />
-              )}
+              <SvgIcon name="cart" width={30} height={30} />
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {}}>
-              {isDarkTheme ? (
-                <UserProfileWhiteIcon width={20} height={20} />
-              ) : (
-                <UserProfileBlackIcon width={20} height={20} />
-              )}
+              <SvgIcon name="userProfile" width={20} height={20} />
             </TouchableOpacity>
           </View>
         </View>
@@ -122,11 +108,7 @@ export default function Dashboard() {
             gap: 10,
             backgroundColor: theme.neutralGray,
           }}>
-          {isDarkTheme ? (
-            <SearchWhiteIcon width={20} height={20} style={{}} />
-          ) : (
-            <SearchBlackIcon width={20} height={20} style={{}} />
-          )}
+          <SvgIcon name="search" width={20} height={20} />
           <TextInput
             placeholder="Search for products"
             value={search}

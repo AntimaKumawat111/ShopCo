@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import {DarkTheme, useTheme} from '../helper/color';
+import {useTheme} from '../helper/color';
 import BaseLayout from '../components/BaseLayout';
-import {BounceInDown} from 'react-native-reanimated';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import BackBlackIcon from '../assets/svg/backBlackIcon';
-import BackWhiteIcon from '../assets/svg/backWhiteIcon';
 import {
   FONT_FAMILY_BOLD,
   FONT_FAMILY_LIGHT,
@@ -28,7 +25,6 @@ import {useNavigation} from '@react-navigation/native';
 function OnSale() {
   const theme = useTheme();
   const styles = createStyles(theme);
-  const isDarkMode = theme.background === DarkTheme.background;
   const navigation = useNavigation();
 
   const handlePressView = () => {

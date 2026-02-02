@@ -32,7 +32,6 @@ function ProductCard({
 }: ProductCardProps) {
   const theme = useTheme();
   const styles = createStyles(theme);
-  const isDarkMode = theme.background === DarkTheme.background;
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>

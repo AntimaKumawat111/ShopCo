@@ -28,7 +28,6 @@ import {useNavigation} from '@react-navigation/native';
 function AllProducts() {
   const theme = useTheme();
   const styles = createStyles(theme);
-  const isDarkMode = theme.background === DarkTheme.background;
   const navigation = useNavigation();
 
   const handlePress = (item: any) => {

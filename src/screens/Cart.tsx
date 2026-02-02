@@ -16,6 +16,7 @@ import {
   FONT_FAMILY_MEDIUM,
   Font_Size_10,
   Font_Size_14,
+  Font_Size_16,
   Font_Size_18,
   Font_Size_26,
 } from '../helper/font';
@@ -27,6 +28,7 @@ import MinusWhiteIcon from '../assets/svg/minusWhiteIcon';
 import MinusBlackIcon from '../assets/svg/minusBlackIcon';
 import AddWhiteIcon from '../assets/svg/addWhiteIcon';
 import AddBlackIcon from '../assets/svg/addBlackIcon';
+import SvgIcon from '../assets/svg';
 
 type Product = {
   id: number;
@@ -45,7 +47,6 @@ function Cart({route}: any) {
   const {item} = route.params;
   const theme = useTheme();
   const styles = createStyles(theme);
-  const isDarkTheme = theme.background === DarkTheme.background;
   const [count, setCount] = useState<Record<string, number>>({});
   if (!item) return null;
 
@@ -87,7 +88,9 @@ function Cart({route}: any) {
               gap: 4,
               width: '55%',
             }}>
-            <Text style={styles.data}>{item.name}</Text>
+            <Text style={[styles.data, {fontSize: Font_Size_16}]}>
+              {item.name}
+            </Text>
 
             <Text style={styles.data}>{item.category}</Text>
             {item.sale && <Text style={styles.data}>Sale Available</Text>}
@@ -108,29 +111,15 @@ function Cart({route}: any) {
                 onPress={() => {
                   decrease(item.id);
                 }}>
-                {isDarkTheme ? (
-                  <MinusWhiteIcon width={20} height={20} />
-                ) : (
-                  <MinusBlackIcon width={20} height={20} />
-                )}
+                <SvgIcon name="minus" width={20} height={20} />
               </TouchableOpacity>
               <Text style={[styles.data, {fontSize: Font_Size_18}]}>
                 {newCount}
               </Text>
               <TouchableOpacity onPress={() => increase(item.id)}>
-                {isDarkTheme ? (
-                  <AddWhiteIcon width={20} height={20} />
-                ) : (
-                  <AddBlackIcon width={20} height={20} />
-                )}
+                <SvgIcon name="add" width={20} height={20} />
               </TouchableOpacity>
             </View>
-            <View style={styles.bottomContainer}>
-              <StarRating
-                rating={item.rating}
-                onChange={() => {}}
-                starSize={10}
-              />
               <View style={styles.priceContainer}>
                 <Text
                   style={[
@@ -144,7 +133,6 @@ function Cart({route}: any) {
                     {item.discountPercent}%
                   </Text>
                 </View>
-              </View>
             </View>
           </View>
         </View>
@@ -157,11 +145,7 @@ function Cart({route}: any) {
       <>
         <View style={styles.emptyBox}>
           <View style={styles.emptyCartImage}>
-            {isDarkTheme ? (
-              <CartBlankWhiteIcon width={150} height={150} />
-            ) : (
-              <CartBlankBlackIcon width={150} height={150} />
-            )}
+            <SvgIcon name="cartBlank" width={150} height={150} />
           </View>
           <Text style={styles.data}>{message} </Text>
         </View>
@@ -276,64 +260,3 @@ const createStyles = (theme: any) => {
   });
 };
 export default Cart;
-{
-  /* <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} />
-        <RenderItem item={item} key={item.id} /> */
-}

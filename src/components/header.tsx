@@ -5,6 +5,7 @@ import BackWhiteIcon from '../assets/svg/backWhiteIcon';
 import BackBlackIcon from '../assets/svg/backBlackIcon';
 import {FONT_FAMILY_BOLD, Font_Size_16, Font_Size_18} from '../helper/font';
 import {useNavigation} from '@react-navigation/native';
+import SvgIcon from '../assets/svg';
 
 interface HeaderProp {
   title: string;
@@ -12,7 +13,6 @@ interface HeaderProp {
 function Header({title}: HeaderProp) {
   const theme = useTheme();
   const styles = createStyles(theme);
-  const isDarkMode = theme.background === DarkTheme.background;
   const navigation = useNavigation();
 
   const handleBack = () => {
@@ -22,11 +22,7 @@ function Header({title}: HeaderProp) {
     <>
       <View style={styles.headerSection}>
         <TouchableOpacity onPress={handleBack}>
-          {isDarkMode ? (
-            <BackWhiteIcon width={20} height={20} />
-          ) : (
-            <BackBlackIcon width={20} height={20} />
-          )}
+          <SvgIcon name="back" width={20} height={20} />
         </TouchableOpacity>
         <Text style={styles.title}>{title} </Text>
       </View>
