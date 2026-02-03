@@ -1,0 +1,709 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Dashboard render succesfully 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "paddingTop": 35,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": undefined,
+          "borderRadius": 8,
+          "flexDirection": "row",
+          "gap": 3,
+          "justifyContent": "center",
+          "marginBottom": 4,
+          "marginHorizontal": 10,
+          "paddingVertical": 6,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#fff",
+            "fontFamily": "Nunito-SemiBold",
+            "fontSize": 20,
+          }
+        }
+      >
+        Sign up and get 20% off to your first orpder.
+      </Text>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "borderBottomWidth": 1,
+              "borderColor": undefined,
+              "color": "#fff",
+              "fontFamily": "Nunito-SemiBold",
+              "fontSize": 26,
+            }
+          }
+        >
+          Sign up now
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginHorizontal": 20,
+          "marginVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": undefined,
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 90,
+          }
+        }
+      >
+        Shop.Co
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 10,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        />
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": undefined,
+          "borderRadius": 50,
+          "flexDirection": "row",
+          "gap": 10,
+          "marginBottom": 10,
+          "marginHorizontal": 20,
+          "paddingLeft": 20,
+        }
+      }
+    >
+      <TextInput
+        editable={true}
+        keyboardType="default"
+        maxLength={40}
+        onChangeText={[Function]}
+        placeholder="Search for products"
+        style={
+          {
+            "flex": 1,
+          }
+        }
+        value=""
+      />
+    </View>
+    <View
+      style={
+        {
+          "backgroundColor": undefined,
+          "borderRadius": 8,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "padding": 10,
+          "paddingHorizontal": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "borderBottomWidth": 1,
+              "borderColor": undefined,
+              "color": undefined,
+              "fontFamily": "Nunito-SemiBold",
+              "fontSize": 36,
+            }
+          }
+        >
+          Shop
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": undefined,
+              "fontFamily": "Nunito-Regular",
+              "fontSize": 32,
+            }
+          }
+        >
+          On Sale
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": undefined,
+              "fontFamily": "Nunito-Regular",
+              "fontSize": 32,
+            }
+          }
+        >
+          New Arrivals
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": undefined,
+              "fontFamily": "Nunito-Regular",
+              "fontSize": 32,
+            }
+          }
+        >
+          Brands
+        </Text>
+      </View>
+    </View>
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "flex": 1,
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source="test-file-stub"
+        style={
+          [
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            {
+              "height": "100%",
+              "width": "100%",
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        style={
+          {
+            "backgroundColor": undefined,
+            "flex": 1,
+          }
+        }
+      >
+        <Image
+          source="test-file-stub"
+          style={
+            {
+              "height": 30,
+              "position": "absolute",
+              "right": 20,
+              "top": 130,
+              "width": 30,
+            }
+          }
+        />
+        <Image
+          source="test-file-stub"
+          style={
+            {
+              "height": 80,
+              "left": 20,
+              "position": "absolute",
+              "top": 300,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "flex": 1,
+              "marginTop": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": undefined,
+                "fontFamily": "Nunito-Bold",
+                "fontSize": 72,
+                "lineHeight": 80,
+                "marginLeft": 10,
+                "width": "70%",
+              }
+            }
+          >
+            Find clothes that matches your style.
+          </Text>
+          <Text
+            style={
+              {
+                "color": undefined,
+                "fontFamily": "Nunito-Regular",
+                "fontSize": 28,
+                "marginLeft": 10,
+                "width": "70%",
+              }
+            }
+          >
+            Browse through our diverse range of meticulosly crafted garments, designed to brignt out your individuality and cater to your sense of style.
+          </Text>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": undefined,
+                "borderRadius": 50,
+                "marginLeft": 10,
+                "marginTop": 10,
+                "opacity": 1,
+                "paddingHorizontal": 30,
+                "paddingVertical": 15,
+                "width": "45%",
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#fff",
+                  "fontFamily": "Nunito-Medium",
+                  "fontSize": 28,
+                }
+              }
+            >
+              Shop Now
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "flex-end",
+              "backgroundColor": undefined,
+              "flexDirection": "row",
+              "gap": 10,
+              "height": 125,
+              "justifyContent": "space-around",
+              "paddingBottom": 50,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "gap": 5,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": undefined,
+                  "fontFamily": "Nunito-ExtraBold",
+                  "fontSize": 40,
+                }
+              }
+            >
+              200+
+            </Text>
+            <Text
+              style={
+                {
+                  "color": undefined,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 20,
+                }
+              }
+            >
+              International Brands
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "borderColor": undefined,
+                "borderLeftWidth": 1,
+                "height": "70%",
+              }
+            }
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "gap": 5,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": undefined,
+                  "fontFamily": "Nunito-ExtraBold",
+                  "fontSize": 40,
+                }
+              }
+            >
+              2,000+
+            </Text>
+            <Text
+              style={
+                {
+                  "color": undefined,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 20,
+                }
+              }
+            >
+              High-Quality Products
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "borderColor": undefined,
+                "borderLeftWidth": 1,
+                "height": "70%",
+              }
+            }
+          />
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "gap": 5,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": undefined,
+                  "fontFamily": "Nunito-ExtraBold",
+                  "fontSize": 40,
+                }
+              }
+            >
+              30,000+
+            </Text>
+            <Text
+              style={
+                {
+                  "color": undefined,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 20,
+                }
+              }
+            >
+              Happy Customers
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

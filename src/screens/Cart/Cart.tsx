@@ -8,9 +8,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import BaseLayout from '../components/BaseLayout';
-import Header from '../components/header';
-import {DarkTheme, useTheme} from '../helper/color';
+import BaseLayout from '../../components/BaseLayout';
+import Header from '../../components/header';
+import {DarkTheme, useTheme} from '../../helper/color';
 import StarRating from 'react-native-star-rating-widget';
 import {
   FONT_FAMILY_MEDIUM,
@@ -19,16 +19,12 @@ import {
   Font_Size_16,
   Font_Size_18,
   Font_Size_26,
-} from '../helper/font';
-import ButtonGradient from '../components/ButtonGradient';
-import {DUMMYCARDDATA} from '../helper/dummyData';
-import CartBlankWhiteIcon from '../assets/svg/cartBlankWhiteIcon';
-import CartBlankBlackIcon from '../assets/svg/cartBlankBlackIcon';
-import MinusWhiteIcon from '../assets/svg/minusWhiteIcon';
-import MinusBlackIcon from '../assets/svg/minusBlackIcon';
-import AddWhiteIcon from '../assets/svg/addWhiteIcon';
-import AddBlackIcon from '../assets/svg/addBlackIcon';
-import SvgIcon from '../assets/svg';
+} from '../../helper/font';
+import ButtonGradient from '../../components/ButtonGradient';
+import {DUMMYCARDDATA} from '../../helper/dummyData';
+import SvgIcon from '../../assets/svg';
+import {useNavigation} from '@react-navigation/native';
+import {Empty} from '../../components/Empty';
 
 type Product = {
   id: number;
@@ -48,6 +44,9 @@ function Cart({route}: any) {
   const theme = useTheme();
   const styles = createStyles(theme);
   const [count, setCount] = useState<Record<string, number>>({});
+  const navigation = useNavigation();
+  const [dataAvailable, setDataAvailable] = useState(false);
+
   if (!item) return null;
 
   const ColorBox = ({color, index}: any) => {
@@ -75,11 +74,19 @@ function Cart({route}: any) {
       [id]: Math.max((prev[id] || 1) - 1) - 1,
     }));
   };
+
+  const handlePress = (item: any) => {
+    navigation.navigate('ProductDetails', {item} as never);
+  };
+
   const renderItem = ({item}: {item: Product}) => {
     const newCount = count[item.id] || 1;
     return (
       <>
-        <View style={styles.container} key={item.id}>
+        <TouchableOpacity
+          style={styles.container}
+          key={item.id}
+          onPress={() => handlePress(item)}>
           <View style={styles.imageCard}>
             <Image source={item?.image} style={styles.image} />
           </View>
@@ -120,60 +127,52 @@ function Cart({route}: any) {
                 <SvgIcon name="add" width={20} height={20} />
               </TouchableOpacity>
             </View>
-              <View style={styles.priceContainer}>
-                <Text
-                  style={[
-                    styles.data,
-                    {borderBottomWidth: 1, borderColor: theme.text},
-                  ]}>
-                  ${item.price}
+            <View style={styles.priceContainer}>
+              <Text
+                style={[
+                  styles.data,
+                  {borderBottomWidth: 1, borderColor: theme.text},
+                ]}>
+                ${item.price}
+              </Text>
+              <View style={styles.discountPercent}>
+                <Text style={[styles.data, {fontSize: Font_Size_10}]}>
+                  {item.discountPercent}%
                 </Text>
-                <View style={styles.discountPercent}>
-                  <Text style={[styles.data, {fontSize: Font_Size_10}]}>
-                    {item.discountPercent}%
-                  </Text>
-                </View>
+              </View>
             </View>
           </View>
-        </View>
-      </>
-    );
-  };
-
-  const NoDataAvailable = ({message}: any) => {
-    return (
-      <>
-        <View style={styles.emptyBox}>
-          <View style={styles.emptyCartImage}>
-            <SvgIcon name="cartBlank" width={150} height={150} />
-          </View>
-          <Text style={styles.data}>{message} </Text>
-        </View>
+        </TouchableOpacity>
       </>
     );
   };
 
   return (
     <BaseLayout>
-      <Header title="Cart" />
+      <Header title="My Cart" />
       <View style={{flex: 1, marginHorizontal: 10}}>
         <FlatList
-          data={DUMMYCARDDATA ? DUMMYCARDDATA : []}
+          data={DUMMYCARDDATA}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           maxToRenderPerBatch={5}
+          contentContainerStyle={{flexGrow: 1}}
           ListEmptyComponent={() => (
-            <NoDataAvailable message="No Cart is available" />
+            <Empty iconName="cartBlank" message="No Cart is available" />
           )}
         />
       </View>
-
       <View
         style={{
           marginHorizontal: 10,
           marginVertical: 10,
         }}>
-        <ButtonGradient title="Proceed" onPress={() => {}} />
+        <ButtonGradient
+          title="Checkout"
+          onPress={() => {
+            navigation.navigate('Checkout' as never);
+          }}
+        />
       </View>
     </BaseLayout>
   );
@@ -249,8 +248,6 @@ const createStyles = (theme: any) => {
       gap: 10,
       justifyContent: 'center',
       alignItems: 'center',
-      borderWidth: 1,
-      borderColor: 'red',
     },
     emptyCartImage: {
       backgroundColor: theme.neutralGray,

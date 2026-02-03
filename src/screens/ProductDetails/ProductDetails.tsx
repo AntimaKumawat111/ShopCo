@@ -8,9 +8,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import BaseLayout from '../components/BaseLayout';
-import Header from '../components/header';
-import {useTheme} from '../helper/color';
+import BaseLayout from '../../components/BaseLayout';
+import Header from '../../components/header';
+import {useTheme} from '../../helper/color';
 import StarRating from 'react-native-star-rating-widget';
 import {
   FONT_FAMILY_MEDIUM,
@@ -21,8 +21,8 @@ import {
   Font_Size_16,
   Font_Size_18,
   Font_Size_20,
-} from '../helper/font';
-import ButtonGradient from '../components/ButtonGradient';
+} from '../../helper/font';
+import ButtonGradient from '../../components/ButtonGradient';
 import {useNavigation} from '@react-navigation/native';
 
 type ProductDetailsProp = {
@@ -38,8 +38,6 @@ function ProductDetails({route}: ProductDetailsProp) {
   const theme = useTheme();
   const styles = createStyles(theme);
   const navigation = useNavigation();
-
-  console.log('======>>> item from productDetails', item);
   if (!item) {
     return null;
   }
@@ -164,7 +162,7 @@ function ProductDetails({route}: ProductDetailsProp) {
                 width: '55%',
               }}>
               {item?.availableColors?.map((color: any, index: number) => (
-                <View style={{gap: 4,marginVertical:5}}>
+                <View style={{gap: 4, marginVertical: 5}}>
                   <ColorBox color={color} index={index} />
                 </View>
               ))}

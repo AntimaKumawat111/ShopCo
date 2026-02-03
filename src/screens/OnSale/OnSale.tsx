@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import {useTheme} from '../helper/color';
-import BaseLayout from '../components/BaseLayout';
+import {useTheme} from '../../helper/color';
+import BaseLayout from '../../components/BaseLayout';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {
   FONT_FAMILY_BOLD,
@@ -16,10 +16,10 @@ import {
   Font_Size_24,
   Font_Size_26,
   Font_Size_30,
-} from '../helper/font';
-import ProductCard from '../components/card/ProductCard';
-import {DUMMYCARDDATA} from '../helper/dummyData';
-import Header from '../components/header';
+} from '../../helper/font';
+import ProductCard from '../../components/card/ProductCard';
+import {DUMMYCARDDATA} from '../../helper/dummyData';
+import Header from '../../components/header';
 import {useNavigation} from '@react-navigation/native';
 
 function OnSale() {

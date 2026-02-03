@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import {DarkTheme, useTheme} from '../helper/color';
-import BaseLayout from '../components/BaseLayout';
+import {DarkTheme, useTheme} from '../../helper/color';
+import BaseLayout from '../../components/BaseLayout';
 import {BounceInDown} from 'react-native-reanimated';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import BackBlackIcon from '../assets/svg/backBlackIcon';
@@ -19,10 +19,10 @@ import {
   Font_Size_24,
   Font_Size_26,
   Font_Size_30,
-} from '../helper/font';
-import ProductCard from '../components/card/ProductCard';
-import {DUMMYCARDDATA} from '../helper/dummyData';
-import Header from '../components/header';
+} from '../../helper/font';
+import ProductCard from '../../components/card/ProductCard';
+import {DUMMYCARDDATA} from '../../helper/dummyData';
+import Header from '../../components/header';
 import {useNavigation} from '@react-navigation/native';
 
 function AllProducts() {

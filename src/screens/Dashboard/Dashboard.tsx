@@ -9,8 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {DarkTheme, useTheme} from '../helper/color';
-import BaseLayout from '../components/BaseLayout';
+import {DarkTheme, useTheme} from '../../helper/color';
+import BaseLayout from '../../components/BaseLayout';
 import {
   FONT_BOLD,
   FONT_FAMILY_BOLD,
@@ -36,9 +36,9 @@ import {
   LINE_HEIGHT_30,
   LINE_HEIGHT_40,
   LINE_HEIGHT_50,
-} from '../helper/font';
+} from '../../helper/font';
 import {useNavigation} from '@react-navigation/native';
-import SvgIcon from '../assets/svg';
+import SvgIcon from '../../assets/svg';
 
 export default function Dashboard() {
   const theme = useTheme();

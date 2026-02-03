@@ -1,19 +1,27 @@
-import AddBlackIcon from './addBlackIcon';
-import AddWhiteIcon from './addWhiteIcon';
-import BackBlackIcon from './backBlackIcon';
-import BackWhiteIcon from './backWhiteIcon';
-import CartBlackIcon from './cartBlackIcon';
-import CartWhiteIcon from './cartWhiteIcon';
-import CartBlankBlackIcon from './cartBlankBlackIcon';
-import CartBlankWhiteIcon from './cartBlankWhiteIcon';
-import ForwardBlackIcon from './forwardBlackIcon';
-import ForwardWhiteIcon from './forwardWhiteIcon';
-import MinusBlackIcon from './minusBlackIcon';
-import MinusWhiteIcon from './minusWhiteIcon';
-import SearchBlackIcon from './searchBlackIcon';
-import SearchWhiteIcon from './searchWhiteIcon';
-import UserProfileBlackIcon from './userProfileBlackIcon';
-import UserProfileWhiteIcon from './userProfileWhiteIcon';
+import AddBlackIcon from './icons/addBlackIcon';
+import AddWhiteIcon from './icons/addWhiteIcon';
+import MinusBlackIcon from './icons/minusBlackIcon';
+import MinusWhiteIcon from './icons/minusWhiteIcon';
+import SearchBlackIcon from './icons/searchBlackIcon';
+import SearchWhiteIcon from './icons/searchWhiteIcon';
+import UserProfileBlackIcon from './icons/userProfileBlackIcon';
+import UserProfileWhiteIcon from './icons/userProfileWhiteIcon';
+import ForwardBlackIcon from './icons/forwardBlackIcon';
+import ForwardWhiteIcon from './icons/forwardWhiteIcon';
+import BackBlackIcon from './icons/backBlackIcon';
+import BackWhiteIcon from './icons/backWhiteIcon';
+import CartBlackIcon from './icons/cartBlackIcon';
+import CartWhiteIcon from './icons/cartWhiteIcon';
+import CartBlankBlackIcon from './icons/cartBlankBlackIcon';
+import CartBlankWhiteIcon from './icons/cartBlankWhiteIcon';
+import DiscountBlackIcon from './icons/discountBlack';
+import DiscountWhiteIcon from './icons/discountWhite';
+import LocationWhiteIcon from './icons/locationWhiteIcon';
+import LocationBlackIcon from './icons/locationBlackIcon';
+import CreditCardBlackIcon from './icons/creditCardBlackIcon';
+import CreditCartWhiteIcon from './icons/creditCardWhiteIcon';
+import PayPalBlackIcon from './icons/paypalBlackIcon';
+import PayPalWhiteIcon from './icons/paypalWhiteIcon';
 
 export const ICONS = {
   add: {
@@ -55,6 +63,23 @@ export const ICONS = {
     light: CartBlankBlackIcon,
     dark: CartBlankWhiteIcon,
   },
+  discount: {
+    light: DiscountBlackIcon,
+    dark: DiscountWhiteIcon,
+  },
+  location: {
+    light: LocationWhiteIcon,
+    dark: LocationBlackIcon,
+  },
+  creditCard: {
+    light: CreditCardBlackIcon,
+    dark: CreditCartWhiteIcon,
+  },
+  payPal: {
+    light: PayPalBlackIcon,
+    dark: PayPalWhiteIcon,
+  },
+  
 } as const;
 
 export type IconName = keyof typeof ICONS;
