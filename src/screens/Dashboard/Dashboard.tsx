@@ -85,6 +85,7 @@ export default function Dashboard() {
             <Text style={styles.signupTxt}>Sign up now</Text>
           </TouchableOpacity>
         </View>
+
         <View style={styles.shopCoContainer}>
           <Text style={styles.shopCoTxt}>Shop.Co</Text>
           <View style={styles.iconContainer}>
@@ -97,6 +98,7 @@ export default function Dashboard() {
             </TouchableOpacity>
           </View>
         </View>
+
         <View
           style={{
             borderRadius: 50,
@@ -108,7 +110,9 @@ export default function Dashboard() {
             gap: 10,
             backgroundColor: theme.neutralGray,
           }}>
+          
           <SvgIcon name="search" width={20} height={20} />
+
           <TextInput
             placeholder="Search for products"
             value={search}
@@ -120,6 +124,7 @@ export default function Dashboard() {
             placeholderTextColor={theme.placeholder}
           />
         </View>
+
         <View style={styles.btnContainer}>
           {BTNTABS.map((item, index) => (
             <TouchableOpacity key={index} onPress={item.onPress}>
@@ -132,6 +137,7 @@ export default function Dashboard() {
             </TouchableOpacity>
           ))}
         </View>
+
         <ImageBackground
           source={require('../assets/images/dashboardCouple.png')}
           style={{
@@ -171,6 +177,7 @@ export default function Dashboard() {
                 <Text style={styles.shopNowBtnTxt}>Shop Now</Text>
               </TouchableOpacity>
             </View>
+            
             <View style={styles.bottomSection}>
               <View style={styles.numContainer}>
                 <Text style={styles.numTxt}>200+</Text>

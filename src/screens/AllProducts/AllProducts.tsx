@@ -33,6 +33,7 @@ function AllProducts() {
   const handlePress = (item: any) => {
     navigation.navigate('ProductDetails', {item} as never);
   };
+  
   const renderItem = ({item}: any) => {
     return (
       <ProductCard
