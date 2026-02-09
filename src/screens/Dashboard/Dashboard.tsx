@@ -99,32 +99,6 @@ export default function Dashboard() {
           </View>
         </View>
 
-        <View
-          style={{
-            borderRadius: 50,
-            marginHorizontal: 20,
-            marginBottom: 10,
-            paddingLeft: 20,
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: 10,
-            backgroundColor: theme.neutralGray,
-          }}>
-          
-          <SvgIcon name="search" width={20} height={20} />
-
-          <TextInput
-            placeholder="Search for products"
-            value={search}
-            onChangeText={setSearch}
-            keyboardType="default"
-            maxLength={40}
-            editable
-            style={{flex: 1}}
-            placeholderTextColor={theme.placeholder}
-          />
-        </View>
-
         <View style={styles.btnContainer}>
           {BTNTABS.map((item, index) => (
             <TouchableOpacity key={index} onPress={item.onPress}>
@@ -139,7 +113,7 @@ export default function Dashboard() {
         </View>
 
         <ImageBackground
-          source={require('../assets/images/dashboardCouple.png')}
+          source={require('../../assets/images/dashboardCouple.png')}
           style={{
             flex: 1,
             width: '100%',
@@ -152,11 +126,11 @@ export default function Dashboard() {
               backgroundColor: theme.overlay,
             }}>
             <Image
-              source={require('../assets/images/Vector.png')}
+              source={require('../../assets/images/Vector.png')}
               style={styles.vectorFst}
             />
             <Image
-              source={require('../assets/images/Vector.png')}
+              source={require('../../assets/images/Vector.png')}
               style={styles.vectorSec}
             />
             <View

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { useTheme } from '../helper/color';
+import { FONT_FAMILY_SEMI_BOLD, Font_Size_16 } from '../helper/font';
 
 type ButtonGradientProps = {
   title: string;
@@ -89,8 +90,8 @@ const createStyle = (
     },
     title: {
       color: theme.white,
-      fontSize: 16,
-      fontWeight: '600',
+      fontSize: Font_Size_16,
+      fontFamily:FONT_FAMILY_SEMI_BOLD,
     },
   });
 

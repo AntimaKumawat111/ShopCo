@@ -68,8 +68,8 @@ export const ICONS = {
     dark: DiscountWhiteIcon,
   },
   location: {
-    light: LocationWhiteIcon,
-    dark: LocationBlackIcon,
+    light: LocationBlackIcon,
+    dark: LocationWhiteIcon,
   },
   creditCard: {
     light: CreditCardBlackIcon,
