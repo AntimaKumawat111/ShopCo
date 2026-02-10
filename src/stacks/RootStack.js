@@ -6,7 +6,7 @@ import ProductDetails from '../screens/ProductDetails/ProductDetails';
 import AllProducts from '../screens/AllProducts/AllProducts';
 import Cart from '../screens/Cart/Cart';
 import Checkout from '../screens/Checkout/Checkout';
-import {OrderConfirm} from '../components/OrderConfirm';
+import {OrderConfirm} from '../components/OrderConfirmPopup';
 
 const Stack = createNativeStackNavigator();
 

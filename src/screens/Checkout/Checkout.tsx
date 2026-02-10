@@ -26,7 +26,7 @@ import ButtonGradient from '../../components/ButtonGradient';
 import {TextInputBox} from '../../components/TextInputBox';
 import {PaymentBox} from '../../components/PaymentBox';
 import {useNavigation} from '@react-navigation/native';
-import {OrderConfirmPopup} from '../../components/OrderConfirm';
+import {OrderConfirmPopup} from '../../components/OrderConfirmPopup';
 
 function Checkout() {
   const theme = useTheme();
