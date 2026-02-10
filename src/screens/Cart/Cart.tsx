@@ -152,7 +152,7 @@ function Cart({route}: any) {
       <Header title="My Cart" />
       <View style={{flex: 1, marginHorizontal: 10}}>
         <FlatList
-          data={DUMMYCARDDATA}
+          data={DUMMYCARDDATA ? DUMMYCARDDATA : []}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           maxToRenderPerBatch={5}

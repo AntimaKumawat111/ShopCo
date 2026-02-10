@@ -22,6 +22,9 @@ import CreditCardBlackIcon from './icons/creditCardBlackIcon';
 import CreditCartWhiteIcon from './icons/creditCardWhiteIcon';
 import PayPalBlackIcon from './icons/paypalBlackIcon';
 import PayPalWhiteIcon from './icons/paypalWhiteIcon';
+import GreenCheck from './icons/greenCheck';
+import CloseBtnBlackIcon from './icons/closeBtnBlackIcon';
+import CloseBtnWhiteIcon from './icons/closeBtnWhiteIcon';
 
 export const ICONS = {
   add: {
@@ -63,23 +66,36 @@ export const ICONS = {
     light: CartBlankBlackIcon,
     dark: CartBlankWhiteIcon,
   },
+
   discount: {
     light: DiscountBlackIcon,
     dark: DiscountWhiteIcon,
   },
+
   location: {
     light: LocationBlackIcon,
     dark: LocationWhiteIcon,
   },
+
   creditCard: {
     light: CreditCardBlackIcon,
     dark: CreditCartWhiteIcon,
   },
+
   payPal: {
     light: PayPalBlackIcon,
     dark: PayPalWhiteIcon,
   },
-  
+
+  greenCheck: {
+    light: GreenCheck,
+    dark: GreenCheck,
+  },
+
+  closeBtn: {
+    light: CloseBtnBlackIcon,
+    dark: CloseBtnWhiteIcon,
+  },
 } as const;
 
 export type IconName = keyof typeof ICONS;

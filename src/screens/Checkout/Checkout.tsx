@@ -24,19 +24,23 @@ import {
 } from '../../helper/font';
 import ButtonGradient from '../../components/ButtonGradient';
 import {TextInputBox} from '../../components/TextInputBox';
-import { PaymentBox } from '../../components/PaymentBox';
-
+import {PaymentBox} from '../../components/PaymentBox';
+import {useNavigation} from '@react-navigation/native';
+import {OrderConfirmPopup} from '../../components/OrderConfirm';
 
 function Checkout() {
   const theme = useTheme();
   const styles = createStyles(theme);
-
+  const navigation = useNavigation();
   const [discountCode, setDiscountCode] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [postelCode, setPostelCode] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
-  
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
   return (
     <>
       <BaseLayout>
@@ -105,7 +109,7 @@ function Checkout() {
                 />
               </View>
             </View>
-            <ButtonGradient title="Confirm Order" onPress={() => {}} />
+            <ButtonGradient title="Confirm Order" onPress={handleShowPopup} />
           </ScrollView>
         </KeyboardAvoidingView>
       </BaseLayout>
